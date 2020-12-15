@@ -1,0 +1,251 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$sidebar-bg: hsl(211, 18%, 23%);
+$heading-color: hsl(160, 3%, 17%);
+$button-bg : hsl(32, 73%, 59%);
+$hover-shadow: 2px 2px 15px #292929;
+$font-color-white: #fff;
+
+body 
+{
+    font: 100% $font-stack;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  background: hsl(40, 20%, 94%); 
+  padding: 3%;
+  margin-left: 10%;
+}
+
+button {
+  background: $sidebar-bg;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  position: absolute;
+  right: 3%;
+  top: 3.5%;
+  color: $font-color-white;
+  
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 18%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $sidebar-bg;
+  overflow-x: hidden;
+
+  :hover {
+    background: $button-bg;
+    color: $font-color-white;
+    box-shadow: $hover-shadow;
+  }
+
+ a {
+    padding: 18px;
+    text-decoration: none;
+    font-size: 21px;
+    color: $font-color-white;
+    display: block;
+    text-align: center;
+  }
+}
+
+h3{
+  color: $font-color-white;
+}
+
+.grid {
+  position: relative;
+  margin: 5% 0 0 21%;
+
+  .module{
+    padding: 4% 7%;
+    text-align: center;
+    color: #eee;
+    border-radius: 2px;
+    font-size: 24px;
+  }
+
+  .module:hover {
+    background-color: $sidebar-bg;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .module1 {
+    background-color: #4c3de0;
+    margin-right: 2%;
+  }
+
+  .module2 {
+    background-color: #fa7825;
+    margin-right: 2%;
+  }
+
+  .module3 {
+    background-color:#42bb71;
+    margin-right: 2%;
+  }
+
+  .module4 {
+    background-color: #f63641;
+  }
+}
+
+.grid2 {
+  position: relative;
+  margin: 17% 0 0 21%;
+
+  .component{
+    text-align: center;
+    color: #000;
+    border-radius: 2px;
+    font-size: 24px;
+  }
+
+  .component1:hover {
+    background-color: #14abef;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .component2:hover {
+    background-color: #ade2fa;
+    cursor: pointer;
+    color:#000;
+  }
+
+  .component1 {
+    background-color: #ade2fa;
+    margin-right: 2%;
+    padding: 13% 20%;
+  }
+
+  .component2 {
+    background-color:#14abef;
+    padding: 13% 15.4%;
+  }
+}
+
+.grid3 {
+  position: relative;
+  margin: 17% 0 0 21%;
+
+  .social{
+    text-align: center;
+    color: #000;
+    border-radius: 7px;
+    font-size: 24px;
+    padding: 4% 11.88%;
+    border: 3px solid $sidebar-bg;
+  }
+
+  .social1:hover {
+    background-color: #4c3de0;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .social2:hover {
+    background-color: #fa7825;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .social3:hover {
+    background-color:#42bb71;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .social1 {
+    margin-right: 2%;
+  }
+
+  .social2 {
+    margin-right: 2%;
+  }
+}
+
+.circle
+  {
+    border-radius: 10px;
+    padding: 2% 2%;
+    background-color: #000;
+  }
+
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+
+    .button
+    {
+      position: absolute;
+      right: 4%;
+      top: 5%;
+    }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
+  .button
+  {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidenav a {float: left;}
+  div.content {margin-left: 0;}
+
+  .button
+{
+  position: absolute;
+  right: 4%;
+  top: 5%;
+}
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
+  .button
+{
+  position: absolute;
+  right: 4%;
+  top: 5%;
+}
+}

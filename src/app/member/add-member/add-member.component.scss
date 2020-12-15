@@ -1,0 +1,54 @@
+$button-bg : hsl(32, 73%, 59%);
+$hover-shadow: 5px 5px 15px #292929;
+$font-color-white: #fff;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+
+  .form-field-margin {
+      margin: 2% 0 0 35%;
+  }
+  label {
+    width: 16em;
+    color: #607D8B;
+    font-weight: bold;
+    display: inline-table;
+
+    span{
+        color: red;
+    }
+  }
+  
+  input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: 0.4em;
+    width: 90%;
+  }
+
+  button {
+    background: hsl(36, 57%, 53%);
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    color: $font-color-white;
+    width: 15%;
+  }
+  button:hover {
+    box-shadow: $hover-shadow;
+  }
+
+  .form-control.is-invalid{
+    border:1px solid red;
+}
+
+.invalid-feedback {
+  font-size: 80%;
+  color: red;
+  margin-top: 2px;
+}

@@ -1,0 +1,55 @@
+$button-bg : hsl(32, 73%, 59%);
+$hover-shadow: 1px 1px 7px #292929;
+$font-color-white: #fff;
+$font-color-black: #000;
+$button-cancel: hsl(0, 0%, 94);
+$title: hsl(214, 50%, 24%);
+
+.title-clr
+{
+    color: $title;
+    margin-top: 0;
+}
+
+
+.model {
+    height: 100%;
+    text-align:center;
+}
+
+.buttons-margin
+{
+    text-align:center;
+    margin-top: 25px;
+}
+
+.button-confirm {
+    background: #cb9543;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    color:$font-color-white;
+    width: 25%;
+    margin: 0 12px;
+
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+  }
+
+  .button-cancel {
+    background: button-cancel;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    color: $font-color-black;
+    width: 25%;
+
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+  }

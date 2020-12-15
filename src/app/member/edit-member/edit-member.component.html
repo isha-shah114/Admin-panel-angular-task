@@ -1,0 +1,64 @@
+<div *ngFor="let user of editUser">
+    <h2>{{user.firstName | uppercase}} Details</h2>
+    <div><span>empid: </span>{{user.empid}}</div>
+    <form [formGroup]="editMember" (ngSubmit)="update(user.empid)">
+      <div class="form-group">
+        <div class="form-field-margin">
+          <label>First Name:
+            <input [(ngModel)]="user.firstName" placeholder="First Name" formControlName="firstName"
+            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
+          </label>
+          <label>Last Name:
+            <input [(ngModel)]="user.lastName" placeholder="Last Name" formControlName="lastName" 
+            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"/>
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
+          </label>
+        </div>
+        <div class="form-field-margin">
+          <label style="position: relative;">Email:
+            <input [(ngModel)]="user.email" placeholder="email" formControlName="email"
+            [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+          </label>
+          <label>Phone:
+            <input [(ngModel)]="user.phone" placeholder="phone number" formControlName="phone"
+            [ngClass]="{ 'is-invalid': submitted && f.phone.errors }"/>
+            <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+              <div *ngIf="f.phone.errors.required">Phone is required</div>
+              <div *ngIf="f.phone.errors.pattern">Phone number must be of 10 digits</div>
+            </div>
+          </label>
+        </div>
+        <div class="form-field-margin">
+          <label style="position: relative;">Employee Id:
+            <input [(ngModel)]="user.empid" formControlName="empid" [attr.disabled]="true"/>
+          </label>
+          <label>Designation:
+            <input [(ngModel)]="user.designation" placeholder="Designation" formControlName="designation" 
+            [ngClass]="{ 'is-invalid': submitted && f.designation.errors }"/>
+            <div *ngIf="submitted && f.designation.errors" class="invalid-feedback">
+              <div *ngIf="f.designation.errors.required">Designation is required</div>
+            </div>
+          </label>
+        </div>
+        <div class="form-field-margin">
+          <label style="position: relative;">Message:
+            <textarea [(ngModel)]="user.message" placeholder="Message" rows="5" cols="68" 
+            formControlName="message"></textarea>
+          </label>
+        </div>
+        <div class="form-field-margin">
+          <button (click)="goBack()">Go back</button>
+          <button type="submit" class="btn btn-default button-position" >Update</button>
+        </div>
+      </div>
+    </form>
+</div>

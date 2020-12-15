@@ -1,0 +1,48 @@
+$button-bg : hsl(214, 50%, 24%);
+$hover-shadow: 5px 7px 18px #1e385a59;
+$font-color-white: #fff;
+
+/* membersComponent's private CSS styles */
+table  {
+  border-collapse: collapse;
+  position: relative;
+  left: 9%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  cursor: pointer;
+  margin-top: 4%;
+
+  th , td{
+    border: 1px solid grey;
+    padding: 12px;
+  }
+
+  thead {
+    background: $button-bg;
+    color: $font-color-white;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  tr:hover {
+    background-color: #DDD;
+  }
+  tr.selected {
+    background-color: #CFD8DC;
+  }
+  tr.selected:hover {
+    background-color: #BBD8DC;
+  }
+
+  .message-wrap
+  {
+    word-break: break-word;
+    width: 20%;
+  }
+}

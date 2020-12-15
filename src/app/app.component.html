@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div id="header">
+      <button type="button" class="btn btn-default" routerLink="/add">Add new member</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="sidenav">
+      <a href="#"><h3>{{title}}</h3></a>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/member">Member</a>
+      <a routerLink="/employee">Employee</a>
+      <a href="#">Components</a>
+      <a href="#">Charts</a>
+      <a href="#">Icons</a>
+      <a href="#">UI Elements</a>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<app-messages></app-messages>

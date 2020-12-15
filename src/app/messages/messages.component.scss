@@ -1,0 +1,38 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$heading-color: hsl(0, 100%, 50%);
+$button-bg : hsl(32, 73%, 59%);
+$hover-shadow: 1px 1px 7px #292929;
+$font-color-white: #fff;
+
+/* MessagesComponent's private CSS styles */
+h2 {
+  color: $heading-color;
+  font-family: $font-stack;
+  font-weight: lighter;
+}
+
+.align-message
+{
+    text-align: center;
+}
+  
+button.clear {
+  background-color:$button-bg;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color:$font-color-white;
+  width: 5%;
+  font-size: 17px;
+  margin-bottom: 1%;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+  :disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+}

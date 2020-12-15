@@ -1,0 +1,11 @@
+<div class="model">
+  <h3 mat-dialog-title class="title-clr">{{data.title}}</h3>
+  <div mat-dialog-content>
+    {{data.message}}
+  </div>
+  <div class="buttons-margin">
+    <input type="button" class="button-confirm" value="Confirm" 
+            [mat-dialog-close]="true">
+    <input type="button" value="Cancel" class="button-cancel" [mat-dialog-close]="false">
+  </div>
+</div>
