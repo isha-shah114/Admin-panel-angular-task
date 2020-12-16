@@ -1,28 +1,34 @@
-<table class="table table-bordered table-hover">
-  <thead>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Employee Id</th>
-    <th>Designation</th>
-    <th>Message</th>
-    <th>Edit</th>
-    <th>Remove</th>
-  </thead>
+<div *ngIf= "members.length == 0 ">
+  <h1>No data found, Please add some members</h1>
+</div>
 
-  <tbody>
-    <tr *ngFor="let addData of members">
-      <td>{{addData.firstName}}</td>
-      <td>{{addData.lastName}}</td>
-      <td>{{addData.email}}</td>
-      <td>{{addData.phone}}</td>
-      <td>{{addData.empid}}</td>
-      <td>{{addData.designation}}</td>
-      <td class="message-wrap">{{addData.message}} </td>
-      <td><button class="edit" routerLink="/edit/{{addData.empid}}">Edit</button></td>
-      <td><button class="delete" title="delete member"
-        (click)="delete(addData)">Remove</button></td>
-    </tr>
-  </tbody>
-</table>
+<div *ngIf= "members.length > 0 ">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Employee Id</th>
+      <th>Designation</th>
+      <th>Message</th>
+      <th>Edit</th>
+      <th>Remove</th>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let addData of members">
+        <td>{{addData.firstName}}</td>
+        <td>{{addData.lastName}}</td>
+        <td>{{addData.email}}</td>
+        <td>{{addData.phone}}</td>
+        <td>{{addData.empid}}</td>
+        <td>{{addData.designation}}</td>
+        <td class="message-wrap">{{addData.message}} </td>
+        <td><button class="edit" routerLink="/edit/{{addData.empid}}">Edit</button></td>
+        <td><button class="delete" title="delete member"
+          (click)="delete(addData)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

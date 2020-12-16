@@ -25,6 +25,7 @@ export class MemberComponent implements OnInit {
 
   getMembers(): void {
     this.members = JSON.parse(localStorage.getItem('Users'));
+    console.log(this.members.length);
   }
 
   delete(member): void {
