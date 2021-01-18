@@ -20,7 +20,7 @@
           </label>
         </div>
         <div class="form-field-margin">
-          <label>Email:
+          <label style="position: relative;">Email:
             <input [(ngModel)]="user.email" placeholder="email" formControlName="email"
             [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">

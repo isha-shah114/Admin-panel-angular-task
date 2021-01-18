@@ -16,13 +16,12 @@ export class MemberService {
     if(localStorage.getItem('Users'))
     {
       users = JSON.parse(localStorage.getItem('Users'));
-
-      users.push(user);
-      localStorage.setItem('Users', JSON.stringify(users));
+      users.push(user);  
     }
     else{
       users = [user];
     }
+    localStorage.setItem('Users', JSON.stringify(users));
   }
 
   updateUser(editUser)

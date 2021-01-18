@@ -79,12 +79,12 @@ h3{
     color: #eee;
     border-radius: 2px;
     font-size: 24px;
+  }
 
-    &:hover {
-      background-color: $sidebar-bg;
-      cursor: pointer;
-      color:$font-color-white;
-    }
+  .module:hover {
+    background-color: $sidebar-bg;
+    cursor: pointer;
+    color:$font-color-white;
   }
 
   .module1 {
@@ -118,27 +118,27 @@ h3{
     font-size: 24px;
   }
 
+  .component1:hover {
+    background-color: #14abef;
+    cursor: pointer;
+    color:$font-color-white;
+  }
+
+  .component2:hover {
+    background-color: #ade2fa;
+    cursor: pointer;
+    color:#000;
+  }
+
   .component1 {
     background-color: #ade2fa;
     margin-right: 2%;
     padding: 13% 20%;
-
-    &:hover {
-      background-color: #14abef;
-      cursor: pointer;
-      color:$font-color-white;
-    }
   }
 
   .component2 {
     background-color:#14abef;
     padding: 13% 15.4%;
-
-    &:hover {
-      background-color: #ade2fa;
-      cursor: pointer;
-      color:#000;
-    }
   }
 }
 
@@ -155,24 +155,16 @@ h3{
     border: 3px solid $sidebar-bg;
   }
 
-  .social1 {
-    margin-right: 2%;
-
-    &:hover {
-      background-color: #4c3de0;
-      cursor: pointer;
-      color:$font-color-white;
-    }
+  .social1:hover {
+    background-color: #4c3de0;
+    cursor: pointer;
+    color:$font-color-white;
   }
 
-  .social2 {
-    margin-right: 2%;
-
-    &:hover {
-      background-color: #fa7825;
-      cursor: pointer;
-      color:$font-color-white;
-    }
+  .social2:hover {
+    background-color: #fa7825;
+    cursor: pointer;
+    color:$font-color-white;
   }
 
   .social3:hover {
@@ -180,21 +172,35 @@ h3{
     cursor: pointer;
     color:$font-color-white;
   }
+
+  .social1 {
+    margin-right: 2%;
+  }
+
+  .social2 {
+    margin-right: 2%;
+  }
 }
+
+.circle
+  {
+    border-radius: 10px;
+    padding: 2% 2%;
+    background-color: #000;
+  }
 
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
-    max-height: 75px; 
-  }
-  .button
-  {
-    position: absolute;
-    right: 4%;
-    top: 5%;
-  }
-}
+    max-height: 75px; }
 
+    .button
+    {
+      position: absolute;
+      right: 4%;
+      top: 5%;
+    }
+}
 @media (max-width: 1024px) {
   .grid {
     margin: 0;
@@ -220,12 +226,15 @@ h3{
   div.content {margin-left: 0;}
 
   .button
-  {
-    position: absolute;
-    right: 4%;
-    top: 5%;
-  }
+{
+  position: absolute;
+  right: 4%;
+  top: 5%;
 }
+}
+
+
+
 
 @media screen and (max-width: 400px) {
   .sidenav a {
@@ -234,9 +243,9 @@ h3{
     width: 100%;
   }
   .button
-  {
-    position: absolute;
-    right: 4%;
-    top: 5%;
-  }
+{
+  position: absolute;
+  right: 4%;
+  top: 5%;
+}
 }

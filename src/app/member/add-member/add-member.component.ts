@@ -38,24 +38,36 @@ export class AddMemberComponent implements OnInit {
             return;
         }
 
-        this.user = this.employeeForm.value;
+        this.user = Object.assign(this.user, this.employeeForm.value);
         
 
         this.resetUser = JSON.parse(localStorage.getItem('Users'));
         console.log(this.resetUser);
         console.log(this.user.empid);
 
-        if(!this.resetUser.some((item) => item.empid == this.user.empid))
-        {
-          this.memberService.addUser(this.user);
-          alert('Data added successfully');
-          this.employeeForm.reset();
-          this.submitted = false;
-        } 
-        else
-        {
-          alert("employee id already exist");
+        if(this.resetUser){
+          if(!this.resetUser.some((item) => item.empid == this.user.empid))
+          {
+            this.resetUser = JSON.parse(localStorage.getItem('Users'));
+            this.memberService.addUser(this.user);
+            alert('Data added successfully');
+            this.employeeForm.reset();
+            this.submitted = false;
+          } 
+          else
+          {
+            alert("employee id already exist");
+          }
         }
+
+        else{
+          this.memberService.addUser(this.user);
+            alert('Data added successfully');
+            this.employeeForm.reset();
+            this.submitted = false;
+        }
+
+        
         // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.employeeForm.value));
       }
 }

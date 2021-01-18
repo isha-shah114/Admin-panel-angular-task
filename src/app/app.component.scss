@@ -1,6 +1,5 @@
 $font-stack: Arial, Helvetica, sans-serif;
 $sidebar-bg: hsl(211, 18%, 23%);
-$heading-color: hsl(160, 3%, 17%);
 $button-bg : hsl(32, 73%, 59%);
 $hover-shadow: 2px 2px 15px #292929;
 $font-color-white: #fff;
@@ -69,33 +68,6 @@ h3{
   color: $font-color-white;
 }
 
-@media (max-width: 600px) {
-  .module {
-    font-size: 10px;
-    max-height: 75px; }
-
-    .button
-    {
-      position: absolute;
-      right: 4%;
-      top: 5%;
-    }
-}
-@media (max-width: 1024px) {
-  .grid {
-    margin: 0;
-  }
-  .module {
-    min-width: 60px;
-  }
-  .button
-  {
-    position: absolute;
-    right: 4%;
-    top: 5%;
-  }
-}
-
 @media screen and (max-width: 700px) {
   .sidenav {
     width: 100%;
@@ -103,18 +75,7 @@ h3{
     position: relative;
   }
   .sidenav a {float: left;}
-  div.content {margin-left: 0;}
-
-  .button
-{
-  position: absolute;
-  right: 4%;
-  top: 5%;
 }
-}
-
-
-
 
 @media screen and (max-width: 400px) {
   .sidenav a {
@@ -122,10 +83,4 @@ h3{
     float: none;
     width: 100%;
   }
-  .button
-{
-  position: absolute;
-  right: 4%;
-  top: 5%;
-}
 }
